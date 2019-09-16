@@ -5,9 +5,26 @@ package com.dragon.studykotlin
  * @author: guoyongping
  * @date:  2019-09-10 11:44
  */
-class Person : User() {
-    var xx = "000"
+
+
+class Person : User(), InterfaceB {
+
+
+    // user
+    override fun method() {
+        super.method()
+
+
+        topLevelFunction()
+    }
+
+    // InterfaceB
+    override fun interfaceMethod() {
+        //实现
+    }
+
+    val xx: String
         get() {
-            return name + xx
+            return "$name.$xx"
         }
 }
